@@ -1,0 +1,143 @@
+.articles-main {
+  width: min(100% - 48px, 920px);
+  margin: 60px auto 96px;
+}
+
+.article-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  list-style: none;
+}
+
+.article-list-item {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #dce2ed;
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: 0 1px 3px rgb(15 23 42 / 6%);
+  transition: box-shadow 160ms ease;
+}
+
+.article-list-item:hover {
+  box-shadow: 0 4px 12px rgb(15 23 42 / 9%);
+}
+
+.article-list-top {
+  display: flex;
+  padding-bottom: 12px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #edf0f5;
+  color: var(--muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.article-list-category {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: #d5e3fd;
+  color: #0d1c2f;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.article-list-item h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(19px, 2.5vw, 22px);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.article-list-item h2 a {
+  text-decoration: none;
+}
+
+.article-list-item p {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--slate);
+  line-height: 1.75;
+}
+
+.article-list-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.article-list-tags span {
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: var(--surface-low);
+  color: var(--slate);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.article-list-footer {
+  display: flex;
+  margin-top: 2px;
+  padding-top: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #edf0f5;
+}
+
+.article-list-read-link {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.article-list-read-link:hover {
+  color: var(--amber);
+}
+
+.article-list-read-link:focus-visible,
+.article-list-item h2 a:focus-visible {
+  border-radius: 2px;
+}
+
+.article-list-status {
+  margin: 24px 0;
+  color: var(--slate);
+}
+
+.article-list-status[hidden] {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .articles-main {
+    width: min(100% - 32px, 920px);
+    margin-block: 36px 64px;
+  }
+
+  .articles-heading {
+    margin-bottom: 24px;
+  }
+
+  .article-list-item {
+    padding: 20px;
+    gap: 14px;
+  }
+}
