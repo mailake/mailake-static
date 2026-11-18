@@ -1,5 +1,3 @@
-/* @ts-self-types="./png_core.d.ts" */
-
 /**
  * png解析
  *
