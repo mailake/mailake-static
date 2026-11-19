@@ -1,14 +1,22 @@
+/* @ts-self-types="./png_core.d.ts" */
+
 /**
- * png解析
- *
- * # 参数
- *
- * * `bytes` - 数据。
- *
- * # 返回值
- *
- * * 成功时，返回Png结构体的JSON字符串。
- * * 失败时，返回错误。
+ * @param {Uint8Array | number[]} bytes
+ * @returns {Uint8Array}
+ */
+export function extract_video_1(bytes) {
+    const ptr0 = passArray8ToWasm0(bytes, wasm.__wbindgen_malloc);
+    const len0 = WASM_VECTOR_LEN;
+    const ret = wasm.extract_video_1(ptr0, len0);
+    if (ret[3]) {
+        throw takeFromExternrefTable0(ret[2]);
+    }
+    var v2 = getArrayU8FromWasm0(ret[0], ret[1]).slice();
+    wasm.__wbindgen_free(ret[0], ret[1] * 1, 1);
+    return v2;
+}
+
+/**
  * @param {Uint8Array | number[]} bytes
  * @returns {string}
  */
@@ -53,6 +61,11 @@ function __wbg_get_imports() {
         __proto__: null,
         "./png_core_bg.js": import0,
     };
+}
+
+function getArrayU8FromWasm0(ptr, len) {
+    ptr = ptr >>> 0;
+    return getUint8ArrayMemory0().subarray(ptr / 1, ptr / 1 + len);
 }
 
 function getStringFromWasm0(ptr, len) {

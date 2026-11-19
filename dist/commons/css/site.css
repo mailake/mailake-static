@@ -1343,7 +1343,7 @@ main {
   display: grid;
   padding-bottom: 80px;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .tool-list .content-card {
@@ -1403,6 +1403,14 @@ main {
   align-items: start;
   gap: 24px;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.m-extract-video .analyzer-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.m-extract-video .analyzer-panel {
+  max-width: 760px;
 }
 
 .analyzer-panel,
