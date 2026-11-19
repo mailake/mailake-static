@@ -1971,7 +1971,8 @@ main {
   gap: 8px;
 }
 
-.report-page button {
+.report-page .hero-actions button,
+.report-page .report-tools button {
   display: inline-flex;
   min-height: 40px;
   padding: 8px 16px;
@@ -1985,7 +1986,8 @@ main {
   cursor: pointer;
 }
 
-.report-page button:hover {
+.report-page .hero-actions button:hover,
+.report-page .report-tools button:hover {
   background: #f1f5f9;
 }
 
