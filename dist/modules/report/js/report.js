@@ -24,6 +24,7 @@ window.addEventListener("resize", updateReadingProgress);
 updateReadingProgress();
 
 document.addEventListener("click", async (event) => {
+  if (!(event.target instanceof Element)) return;
   const action = event.target.closest("[data-report-action]");
   if (!action) return;
 
